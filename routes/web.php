@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PengaduController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +22,10 @@ Route::get('/', function () {
 
 Route::get('/registrasi', function () {
     return view('registrasi');
-});
+})->name('registrasi');
+
+Route::get('login', [LoginController::class, 'index'])->name('login');
+Route::get('admin/', [AdminController::class, 'index'])->name('petugas');
+Route::get('pengadu/', [PengaduController::class, 'index'])->name('user');
+Route::post('login', [LoginController::class, 'aksiLogin'])->name('aksiLogin');
+Route::get('welcome', [LoginController::class, 'aksiLogout'])->name('logout');

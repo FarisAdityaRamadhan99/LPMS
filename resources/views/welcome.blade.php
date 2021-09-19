@@ -30,7 +30,9 @@
                         <a class="nav-link active" href="#"><b>TENTANG KAMI</b></a>
                     </li>
                     <li class="nav-item ps-3">
-                        <button type="button" class="btn btn-outline-success" style="border-radius: 100px;">LOGIN</button>
+                        <a href="{{ route('login') }}">
+                            <button type="button" class="btn btn-outline-success" style="border-radius: 100px;">LOGIN</button>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -86,13 +88,13 @@
                                     <div class="col-md-10 mb-3">
                                             <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Keluhan Anda" rows="4"></textarea>
                                     </div>
-                                    <div class="col-md-10">
-                                        <select class="select" multiple>
+                                    <div class="col-md-10 mb-3">
+                                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                            <option selected>Wilayah Kecamatan</option>
                                             <option value="1">One</option>
                                             <option value="2">Two</option>
                                             <option value="3">Three</option>
                                         </select>
-                                        <label class="form-label select-lebel">Wilayah Kecamatan</label>
                                     </div>
                                 </div>
                             </div>
@@ -104,9 +106,9 @@
 
 
         <div class="content">
-            <div class="shadow-sm" style="background: #58b431ff;">
+            <div class="shadow-sm">
                 <div class="row mb-5">
-                <div class="col-12 text-center  text-light">
+                <div class="col-12 text-center">
                     <h3 class="my-3">Bagaimana Caranya?</h3>
                     <p>Berikut ini adalah langkah-langkah membuat sebuah pengaduan di LPMS</p>
                 </div>
